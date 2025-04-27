@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux Commands - Presentation</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Your Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS for smooth scrolling -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .toc {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      width: 80%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .toc ul li {
+      margin: 10px 0;
+    }
+    .toc ul li a {
+      text-decoration: none;
+      color: #070707;
+      font-size: 18px;
+    }
+    .toc ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+<body>
+
+<header class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
+    <h2>Linux Commands Webpage</h2>
+    <h3>By </h3>
+    <h3>Deher Zainab</h3>
+
+  </div>
+</header>
+
+<!-- Table of Contents -->
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#directory-commands">Directory Commands</a></li>
+    <li><a href="#file-commands">File Commands</a></li>
+    <li><a href="#users-permissions">Users and Permissions</a></li>
+    <li><a href="#chmod-commands">chmod Commands</a></li>
+    <li><a href="#system-utility">System & Utility Commands</a></li>
+    <li><a href="#yum-gcc">YUM & GCC Commands</a></li>
+    <li><a href="#stream-pipes">Stream Redirection & Pipes</a></li>
+    <li><a href="#system-calls">System Calls</a></li>
+    <li><a href="#shell-commands">Shell Commands</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="directory-commands" class="card">
+  <h2>Directory Commands</h2>
+  <img src="directory-commands-image.jpg" alt="Directory Commands" class="section-image">
+  <ul>
+    <li><i class="fas fa-terminal"></i> <strong>ls</strong>  List files/directories</li>
+    <li><i class="fas fa-terminal"></i> <strong>ls -a</strong>  List all (including hidden)</li>
+    <li><i class="fas fa-terminal"></i> <strong>pwd</strong>  Show current directory</li>
+    <li><i class="fas fa-terminal"></i> <strong>cd dir-name</strong>  Enter a directory</li>
+    <li><i class="fas fa-terminal"></i> <strong>cd..</strong>  Move up one directory</li>
+    <li><i class="fas fa-folder-plus"></i> <strong>mkdir dir-name</strong>  Create a new directory</li>
+    <li><i class="fas fa-trash-alt"></i> <strong>rm -r dir-name</strong>  Remove a directory</li>
+  </ul>
+</section>
+
+<section id="file-commands" class="card">
+  <h2>File Commands</h2>
+  <img src="file-commands-image.jpg" alt="File Commands" class="section-image">
+  <ul>
+    <li><i class="fas fa-terminal"></i> <strong>nano/pico file-name</strong> - Open nano editor</li>
+    <li><i class="fas fa-terminal"></i> <strong>cat file-name</strong> - Display file content</li>
+    <li><i class="fas fa-terminal"></i> <strong>cat file1 file2</strong> - Concatenate files</li>
+  </ul>
+</section>
+
+<section id="users-permissions" class="card">
+  <h2>Users and Permissions</h2>
+  <img src="permissions-image.jpg" alt="Permissions" class="section-image">
+  <ul>
+    <li><i class="fas fa-user"></i> <strong>u</strong> = user (file owner)</li>
+    <li><i class="fas fa-users"></i> <strong>g</strong> = group</li>
+    <li><i class="fas fa-user-friends"></i> <strong>o</strong> = others</li>
+    <li><i class="fas fa-users-cog"></i> <strong>a</strong> = all (user + group + others)</li>
+  </ul>
+</section>
+
+<section id="chmod-commands" class="card">
+  <h2>chmod Commands</h2>
+  <p><i class="fas fa-lock"></i> <strong>Symbolic Mode:</strong> chmod u+x script.sh</p>
+  <p><i class="fas fa-lock"></i> <strong>Numeric Mode:</strong> chmod 777 file.txt</p>
+</section>
+
+<section id="system-utility" class="card">
+  <h2>System & Utility Commands</h2>
+  <img src="system-commands-image.jpg" alt="System Commands" class="section-image">
+  <ul>
+    <li><i class="fas fa-users"></i> <strong>who</strong> - List users</li>
+    <li><i class="fas fa-user-tag"></i> <strong>whoami</strong> - Display current user</li>
+    <li><i class="fas fa-desktop"></i> <strong>uname</strong> - Display system info</li>
+    <li><i class="fas fa-calendar-alt"></i> <strong>date</strong> - Show date and time</li>
+    <li><i class="fas fa-trash-alt"></i> <strong>clear</strong> - Clear terminal</li>
+    <li><i class="fas fa-sort"></i> <strong>sort</strong> - Sort lines</li>
+  </ul>
+</section>
+
+<section id="yum-gcc" class="card">
+  <h2>YUM & GCC Commands</h2>
+  <ul>
+    <li><i class="fas fa-box"></i> <strong>yum install package</strong> - Install software</li>
+    <li><i class="fas fa-cogs"></i> <strong>gcc --version</strong> - Check GCC version</li>
+    <li><i class="fas fa-code"></i> <strong>gcc hello.c -o hello</strong> - Compile C program</li>
+  </ul>
+</section>
+
+<section id="stream-pipes" class="card">
+  <h2>Stream Redirection & Pipes</h2>
+  <ul>
+    <li><i class="fas fa-share-square"></i> <strong>></strong> - Redirect output (overwrite)</li>
+    <li><i class="fas fa-share-square"></i> <strong>>></strong> - Redirect output (append)</li>
+    <li><i class="fas fa-share-square"></i> <strong><</strong> - Redirect input</li>
+    <li><i class="fas fa-share-alt"></i> <strong>|</strong> - Pipe output to another command</li>
+    <li><i class="fas fa-share-alt-square"></i> <strong>2></strong> - Redirect errors</li>
+  </ul>
+</section>
+
+<section id="system-calls" class="card">
+  <h2>System Calls</h2>
+  <ul>
+    <li><i class="fas fa-cogs"></i> <strong>getpid()</strong> - Get process ID</li>
+    <li><i class="fas fa-user"></i> <strong>getuid()</strong> - Get user ID</li>
+    <li><i class="fas fa-clone"></i> <strong>fork()</strong> - Create a child process</li>
+    <li><i class="fas fa-sync-alt"></i> <strong>wait()</strong> - Wait for child</li>
+    <li><i class="fas fa-power-off"></i> <strong>exit()</strong> - Exit process</li>
+  </ul>
+</section>
+
+<section id="shell-commands" class="card">
+  <h2>Shell Commands</h2>
+  <ul>
+    <li><i class="fas fa-terminal"></i> <strong>test</strong> - Evaluate conditions</li>
+    <li><i class="fas fa-terminal"></i> <strong>fi</strong> - End of if block</li>
+    <li><i class="fas fa-terminal"></i> <strong>case</strong> - Switch-case block</li>
+    <li><i class="fas fa-terminal"></i> <strong>esac</strong> - End of case block</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <h2>Thank You!</h2>
+  <p>Stay curious. Keep learning Linux! 💻</p>
+</footer>
+
+</body>
+</html>
